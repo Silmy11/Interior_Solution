@@ -1,0 +1,21 @@
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f6f9; color: #333; }
+header { background: #1a252f; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+header a { color: #ff6b6b; text-decoration: none; font-weight: bold; }
+main { display: flex; gap: 30px; padding: 30px; max-width: 1200px; margin: auto; }
+.form-section, .table-section { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.form-section { flex: 1; }
+.table-section { flex: 2; }
+input, select, button { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+button { background: #2c3e50; color: white; border: none; font-weight: bold; cursor: pointer; }
+button:hover { background: #1a252f; }
+.btn-secondary { background: #7f8c8d; }
+.btn-secondary:hover { background: #95a5a6; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+th { background: #f8f9fa; }
+.passed { color: #2ecc71; font-weight: bold; }
+.failed { color: #e74c3c; font-weight: bold; }
+.auth-body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #2c3e50; }
+.auth-card { background: white; padding: 40px; border-radius: 8px; text-align: center; width: 350px; }
+.btn-group { display: flex; gap: 10px; }
+.alert-box { background: #e1f5fe; color: #0288d1; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 13px; font-weight: bold; border: 1px solid #b3e5fc; }

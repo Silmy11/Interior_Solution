@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Interior Solutions Login</title>
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <h2>Interior Solutions</h2>
+        <p>Quality Control Portal</p>
+        
+        {% if msg %}
+        <div class="alert-box">{{ msg }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Employee Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="btn-group">
+                <button type="submit" name="login">Log In</button>
+                <button type="submit" name="register" class="btn-secondary">Register Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

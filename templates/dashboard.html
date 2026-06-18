@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Interior Solutions Dashboard</title>
+</head>
+<body>
+    <header>
+        <h2>Interior Solutions Dashboard</h2>
+        <div>Active Inspector: <strong>{{ email }}</strong> | <a href="/logout">Logout</a></div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h3>Log New Inspection</h3>
+            <form method="POST" id="inspectForm">
+                <input type="text" name="name" id="partName" placeholder="Component Name (e.g., Door Panel)" required>
+                <select name="status">
+                    <option value="Passed">Passed</option>
+                    <option value="Failed">Failed</option>
+                </select>
+                <button type="submit">Submit Log</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h3>Recent Inspection Logs</h3>
+            <table>
+                <tr><th>ID</th><th>Component Part</th><th>Status</th><th>Inspector Email</th></tr>
+                {% for part in parts %}
+                <tr>
+                    <td>{{ part.id }}</td>
+                    <td>{{ part.name }}</td>
+                    <td class="{{ part.status.lower() }}">{{ part.status }}</td>
+                    <td>{{ part.inspector }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
